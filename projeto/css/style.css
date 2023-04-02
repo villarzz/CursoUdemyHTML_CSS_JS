@@ -1,7 +1,31 @@
 /* Geral */
-*{
-    font-family: Lato;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+:root {
+  --main-color: #d92123;
+  --primary-text-color:#FFF;
+  --secondary-text-color:#191919;
+  --secondary-color: #868686;
+   --tertiary-color:#eff3f4;
+}
+
+* {
+  font-family: Lato;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+i {
+  background-color: var(--main-color);
 }
