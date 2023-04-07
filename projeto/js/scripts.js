@@ -10,7 +10,17 @@ const allLinks = [...desktopLinks, ...mobileLinks];
 function smoothScrol(e){
     e.preventDefault();
     const href = this.getAttribute("href");
-    console.log(href);
+    const offsetTop = document.querySelector(href).offsetTop;
+    scroll({
+        top: offsetTop,
+        behavior: "smooth"
+    })
+
+    setTimeout(()=>{
+        if(menu.classList.contains("menu-active")){
+            menu.classList.remove("menu-active");
+        }
+    }, 500)
 }
 
 // Eventos
@@ -21,5 +31,5 @@ function smoothScrol(e){
 });
 
 allLinks.forEach((link)=>{
-    link.addEventListener("click",smoothScrol() )
-})
+    link.addEventListener("click",smoothScrol)
+});
