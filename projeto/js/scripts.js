@@ -7,5 +7,9 @@ const menu = document.querySelector("#mobile-navbar");
 
 // Eventos
 menuBtn.addEventListener("click", (e)=> {
-    menu.classList.add("menu-active")
-})
+    menu.classList.add("menu-active");
+});
+
+closeMenuBtn.addEventListener("click", (e)=> {
+    menu.classList.remove("menu-active");
+});
